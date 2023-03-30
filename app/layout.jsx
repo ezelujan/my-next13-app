@@ -1,5 +1,6 @@
 import '@styles/globals.css'
 import { Header } from '@components/header/Header'
+import { fontSpaceGrotesk } from './font'
 
 export default function RootLayout ({ children }) {
   return (
@@ -7,7 +8,7 @@ export default function RootLayout ({ children }) {
       <head>
         <title>My firs app with Next 13</title>
       </head>
-      <body>
+      <body className={fontSpaceGrotesk.className}>
         <Header />
         {children}
       </body>
