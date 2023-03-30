@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { LikeButton } from './LikeButton'
 
 const fetchPosts = async () => {
@@ -14,8 +15,10 @@ export async function ListOfPosts () {
 
   return posts.slice(0, 5).map(post => (
     <article key={post.id}>
-      <h2>{post.title}</h2>
-      <p>{post.body}</p>
+      <Link href='/posts/[id]' as={`/posts/${post.id}`}>
+        <h2>{post.title}</h2>
+        <p>{post.body}</p>
+      </Link>
       <LikeButton id={post.id} />
     </article>
   ))
