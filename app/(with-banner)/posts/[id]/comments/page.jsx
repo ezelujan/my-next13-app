@@ -1,5 +1,5 @@
 const fetchComments = async id => {
-  await new Promise(resolve => setTimeout(resolve, 3000))
+  await new Promise(resolve => setTimeout(resolve, 1500))
 
   const res = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${id}/comments`,
